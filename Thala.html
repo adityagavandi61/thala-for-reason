@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thala For a reason</title>
+  </head>
+  <style>
+    body {
+      background-color: #edadc7;
+    }
+    .ss {
+      text-align: center;
+      margin-top: 200px;
+    }
+    input {
+      border-color: yellow;
+      border-radius: 7px;
+    }
+    button {
+      border-color: red;
+      text-decoration: aquamarine;
+      color: Blue;
+    }
+    button:hover{
+        border-color: green;
+        border-radius: 8px;
+        color: red;
+        text-shadow: black;
+    }
+    h1{
+      color: rgb(244, 232, 5);
+    }
+    h3{
+      color: blue;
+    }
+    video {
+      border: none;
+      outline: none;
+    }
+  </style>
+  <body>
+    <div class="bg"></div>
+    <div class="ss">
+      <h1>Thala For Reason</h1>
+      <h3>Enter your Fav. word or name To check fan or not</h3>
+      <input type="text" placeholder="Enter String" id="inputString" />
+
+      <button onclick="checkStringLength()">Check</button>
+    </div>
+    <center><label id="output"></label><br>
+    <video id="myVideo"  autoplay controls>
+        <source src="" type="video/mp4">
+      </video></center>
+  </body>
+  <script>
+    function checkStringLength() {
+      const inputString = document.getElementById("inputString").value;
+
+      const outputElement = document.getElementById("output");
+      const videoElement = document.getElementById('myVideo');
+
+
+      if (inputString.split("").length === 7) {
+        outputElement.textContent = "Congrats You are fan of Thala";
+        outputElement.style.color = "green";
+        videoElement.src = 'assets/thala_video.mp4';
+      } else {
+        outputElement.textContent = "Opps! You Not";
+        outputElement.style.color = "red";
+        videoElement.src = 'assets/moye_video.mp4';
+      }
+    }
+  </script>
+</html>
